@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Intake Main Flow</h1> 
+            <p><span>*</span> Mandatory field</p>
+        </header> 
+        <section class="information">
+            <p>Information</p>
+            <div class="information-container">
+                <div class="information-leftside">
+                    <form>
+                        <p>
+                            <label for="type">Intake Type <span>*</span></label>
+                            <select id="type" required >
+                                <option value="Referral1">Referral1</option>
+                                <option value="Referral2">Referral2</option>
+                                <option value="Referral3">Referral3</option>
+                                <option value="Referral4">Referral4</option>
+                                <option value="Referral5">Referral5</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="phon">phone</label>
+                            <input type="tel" id="phon" name="phon" placeholder="+380">
+                        </p>
+                        <p>
+                            <label for="email">email</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                            <label for="reg">Application Registration (Optional)</label>
+                            <input class="registration" type="text" name="registration" id="reg" list="regg">
+                            <datalist id="regg">
+                                <option value="111">111</option>
+                                <option value="222">222</option>
+                                <option value="333">333</option>
+                                <option value="444">444</option>
+                                <option value="555">555</option>
+                                <option value="666">666</option>
+                                <option value="777">777</option>
+                                <option value="888">888</option>
+                                <option value="999">999</option>
+                            </datalist>
+                        </p>
+                        <p>
+                            <label for="requested-date">Additional Information Requested Date (Optional)</label>
+                            <input type="date" name="requested-date" id="requested-date">
+                        </p>
+                        <p>
+                            <label for="days-before">Remaining Days Before Referral is Purged (Optional)</label>
+                            <input type="number" name="days-before" id="days-before">
+                        </p>
+                        <p>
+                            <label for="payment-date">Fee Payment Date (Optional)</label>
+                            <input type="date" name="payment-date" id="payment-date">
+                        </p>
+                        <p>
+                            <input type="checkbox" name="fee-processed" id="fee-processed">
+                            <label for="fee-processed">Application Fee Processed</label>        
+                        </p>
+                    </form>
+                </div>
+                <div class="information-rightside">
+                    <form>
+                        <p>
+                            <label for="initial-date">Enrollment Initiation Date jquery</label>
+                            <input type="date" value="2021-11-05" disabled>
+                        </p>
+                        <p>                                
+                            <label for="aplication-category">Application Category <span>*</span> </label>
+                            <select name="aplication-category" id="aplication-category">
+                                <option value="Child Support1">Child Support1</option>
+                                <option value="Child Support2">Child Support2</option>
+                                <option value="Child Support3">Child Support3</option>
+                                <option value="Child Support4">Child Support4</option>
+                                <option value="Child Support5">Child Support5</option>
+                            </select>      
+                        </p>
+                        <p>
+                            <label for="submission-date">Enrollment Submission Date (Optional)</label>
+                            <input type="date" name="submission-date" id="submission-date" value="2021-11-05" disabled>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="purged" id="purged">
+                            <label for="purged">Purged</label>
+                        </p>
+                        <p>
+                            <label for="exempt-paternity">Exempt from Paternity (Optional)</label>
+                            <select name="exempt-paternity" id="exempt-paternity">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="enrollment-status">Enrollment Status (Optional)</label>
+                            <select name="enrollment-status" id="enrollment-status">
+                                <option value="Worklisted">Worklisted</option>
+                                <option value="Homelisted">Homelisted</option>
+                            </select>
+                        </p>
+                    </form> 
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section class="maternity-inf">
+                <h1>Maternity Information</h1>
+                <div class="information-container">
+                    <div>
+                        <input type="checkbox" name="child-support" id="child-support">
+                        <label for="child-support">Are you requesting child support services for an
+                            unborn child?</label>
+                    </div>
+                    <div>
+                        <label for="biological-parent">Other known biological parent? (Optional)</label>
+                        <select name="biological-parent" id="biological-parent">
+                            <option value="none">none</option>
+                            <option value="yes">yes</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+        </section>
+        <section class="official-use">
+            <h1>Official Use</h1>
+            <div class="information-container">
+                <div>
+                    <p>
+                        <label for="case-category">Case Category (select)</label>
+                        <select name="case-category" id="case-category">
+                            <option value="Active IV-A">Active IV-A</option>
+                            <option value="Active IV-A">Active IV-A</option>
+                            <option value="Active IV-A">Active IV-A</option>
+                            <option value="Active IV-A">Active IV-A</option>
+                            <option value="Active IV-A">Active IV-A</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="arrears-indicator">Arrears Only Indicator (Optional)</label>
+                        <select name="arrears-indicator" id="arrears-indicator">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="assign-county">Assigned County of Ownership (Optional)</label>
+                        <select name="assign-county" id="assign-county">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="case-status">Intergovermental Case Status (details)</label>
+                        <select name="case-status" id="case-status">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="handing-indicator">Special Handling Indicator for Applicant (Optional)</label>
+                        <select name="handing-indicator" id="handing-indicator">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="handing-indicator-parent">Special Handling Indicator for Other Parent (Optional)</label>
+                        <select name="handing-indicator-parent" id="handing-indicator-parent">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label for="d-indicator">IV-D Indicator <span>*</span></label>
+                        <select name="d-indicator" id="d-indicator">
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                            <option value="IV-D Indicator">IV-D Indicator</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="int-case-category">Intergovernmental Case Category (Optional)</label>
+                        <select name="int-case-category" id="int-case-category">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="case-type">Intergovernmental Case Type (Optional)</label>
+                        <select name="case-type" id="case-type">
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option value="None">None</option>
+                            <option disabled selected >None</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="case-number">Case Number</label>
+                        <input type="text" name="case-number" id="case-number" placeholder="Search Case Number">
+                        <img src="./img/Vector.png" alt="serch">
+                    </p>
+                    <p>
+                        <label for="referral-number">Referral Number</label>
+                        <input type="text" name="referral-number" id="referral-number" placeholder="Search Case Number">
+                        <img src="./img/Vector.png" alt="serch">
+                    </p>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section class="system-inf">
+            <h1>System Information</h1>
+            <div class="information-container">
+                <div>
+                    <p>
+                        <label for="taken-user">Enrollment Taken by User </label>
+                        <input type="text" id="taken-user" placeholder="Search">
+                        <img src="./img/Vector.png" alt="search">
+                    </p>
+                    <p>
+                        <label for="worker">Worker (Optional)</label>
+                        <input type="text" id="worker" placeholder="Search">
+                        <img src="./img/Vector.png" alt="search">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label for="intake-supervisor">Intake Supervisor (Optional) </label>
+                        <input type="text" id="intake-supervisor" placeholder="Search">
+                        <img src="./img/Vector.png" alt="search">
+                    </p>
+                    <p>
+                        <label for="owner">Owner (Optional)</label>
+                        <input type="text" id="owner" placeholder="Search">
+                        <img src="./img/Vector.png" alt="search">
+                    </p>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </div>
+</body>
+</html>
